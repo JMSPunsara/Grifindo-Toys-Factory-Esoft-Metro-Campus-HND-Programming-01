@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E940B4DB-882E-40A2-B9B7-C4524E9449FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grifindo_Toys_Factory</RootNamespace>
+    <AssemblyName>Grifindo Toys Factory</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Employee_Components.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Components.Designer.cs">
+      <DependentUpon>Employee_Components.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Menu.Designer.cs">
+      <DependentUpon>Employee_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grifindo_Payroll_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grifindo_Payroll_Menu.Designer.cs">
+      <DependentUpon>Grifindo_Payroll_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grifindo_Toys_FactoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grifindo_Toys_FactoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Grifindo_Toys_FactoryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grifindo_Toys_FactoryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Grifindo_Toys_FactoryDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grifindo_Toys_FactoryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Progress_Bar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress_Bar.Designer.cs">
+      <DependentUpon>Progress_Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register_Employee.Designer.cs">
+      <DependentUpon>Register_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salary_Components.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary_Components.Designer.cs">
+      <DependentUpon>Salary_Components.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Components.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Components.Designer.cs">
+      <DependentUpon>Setting_Components.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Employee_Components.resx">
+      <DependentUpon>Employee_Components.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Menu.resx">
+      <DependentUpon>Employee_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grifindo_Payroll_Menu.resx">
+      <DependentUpon>Grifindo_Payroll_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress_Bar.resx">
+      <DependentUpon>Progress_Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_Employee.resx">
+      <DependentUpon>Register_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Salary_Components.resx">
+      <DependentUpon>Salary_Components.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Components.resx">
+      <DependentUpon>Setting_Components.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Grifindo_Toys_FactoryDataSet.xsc">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Grifindo_Toys_FactoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet.xss">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet1.xsc">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Grifindo_Toys_FactoryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet1.xss">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet2.xsc">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Grifindo_Toys_FactoryDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Grifindo_Toys_FactoryDataSet2.xss">
+      <DependentUpon>Grifindo_Toys_FactoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Employee_Components.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lego.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fidget Spinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toy Car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permanent Job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste Shortcut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teacher Hiring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Get Cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salary male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-design-word-toy-shop-with-many-toys_1308-42318-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
